@@ -1,5 +1,11 @@
 const orm = require("../config/orm.js");
 
-//add ORM functions?
+var burgerORM = {
+  	selectAll : function(response){
+  		orm.selectAll(function(data){
+  			response(data);
+  		});
+  	}
+}
 
-//export at the end of burger.js?
+module.exports = burgerORM;

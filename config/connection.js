@@ -1,5 +1,7 @@
 var mysql = require("mysql");
+
 var connection;
+const keys = require("./keys.js");
 
 //JAWSDB for Heroku deployment later?
 if (process.env.JAWSDB_URL) {

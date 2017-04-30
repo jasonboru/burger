@@ -1,11 +1,19 @@
 const connection = require("./connection.js");
 
-function selectAll () {}
+var orm = {
 
-function insertOne () {}
+  selectAll: function(response) {
+    var queryString = "SELECT * FROM burgers";
+    connection.query(queryString, function(err, data){
+      if (err) throw err;
+      response(data);
+    });
+  } //,
 
-function updateOne () {}
+//function insertOne () {}
 
-exports.selectAll = selectAll;
-exports.insertOne = insertOne;
-exports.updateOne = updateOne;
+//function updateOne () {}
+
+};
+
+module.exports = orm;
