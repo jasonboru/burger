@@ -1,13 +1,18 @@
 const orm = require("../config/orm.js");
 
 var burgerORM = {
-  	selectAll : function(response){
+  	selectAll: function(response){
   		orm.selectAll(function(data){
   			response(data);
   		});
   	},
-    insertOne : function(burger_name, response){
+    insertOne: function(burger_name, response){
       orm.insertOne(burger_name, function(data){
+        response(data);
+      });
+    },
+    updateOne: function(id, response){
+      orm.updateOne(id, function(data){
         response(data);
       });
     }

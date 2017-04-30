@@ -16,11 +16,15 @@ var orm = {
       if (err) throw err;
       response(data);
     });
-  }
+  },
 
-//function insertOne () {}
-
-//function updateOne () {}
+  updateOne: function(id, response) {
+    var queryString = "UPDATE burgers SET ? WHERE ?";
+    connection.query(queryString, [{ devoured: true }, { id:id }], function(err, data) {
+      if (err) throw err;
+      response(data);
+    });
+  } 
 
 };
 

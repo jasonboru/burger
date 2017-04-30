@@ -16,4 +16,11 @@ router.post("/", function(req, res) {
   });
 });
 
+router.put("/:id", function(req,res) {
+    burgerORM.updateOne(req.params.id, function(result) {
+        console.log(result);
+        res.redirect("/");
+    });
+})
+
 module.exports = router;
