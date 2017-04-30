@@ -5,7 +5,12 @@ var burgerORM = {
   		orm.selectAll(function(data){
   			response(data);
   		});
-  	}
+  	},
+    insertOne : function(burger_name, response){
+      orm.insertOne(burger_name, function(data){
+        response(data);
+      });
+    }
 }
 
 module.exports = burgerORM;

@@ -4,11 +4,16 @@ var burgerORM = require("../models/burger.js");
 var router = express.Router();
 //create routers and export them
 router.get("/", function(req, res) {
-
- burgerORM.selectAll(function(data) {
-
-   res.render("index", {burger:data});
+    burgerORM.selectAll(function(data) {
+        res.render("index", {burger:data});
  });
+});
+
+router.post("/", function(req, res) {
+    burgerORM.insertOne(req.body.burger, function(result) {
+        console.log(result);
+        res.redirect("/");
+  });
 });
 
 module.exports = router;
