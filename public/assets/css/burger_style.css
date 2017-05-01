@@ -1,0 +1,49 @@
+body {
+	background-image: url("https://s3.amazonaws.com/job-ucf-code-bootcamp/buger/mooby-bgnd-wash.jpg");
+	background-size: cover;
+	background-position: top;
+  font-family: 'Wendy One', sans-serif;
+  font-size: 270%;
+}
+
+.burgerUI {
+  margin-top: 18%;
+}
+
+h1 {
+  color: #ffcc00;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 200%;
+}
+
+.list-group-item-warning {
+  color: #6d609e;
+  background-color:rgba(255, 204, 0, 0.8);
+  border-color: #6d609e;
+}
+
+.list-group-item-info {
+  color: #ffcc00;
+  background-color:rgba(109, 96, 158, 0.7);
+  border-color: #ffcc00;
+}
+
+.eatIt {
+  position: absolute;
+  top: 7px;
+  right: -150px;
+}
+
+textarea.form-control {
+  color: #6d609e;
+  border: 2px solid #ffcc00;
+}
+
+.submitBurger {
+  color: #6d609e;
+  margin-top: 15px;
+}
+
+.form-control {
+  font-size: 42px;
+}

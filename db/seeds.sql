@@ -1,3 +1,4 @@
-INSERT INTO burgers (burger_name) VALUES ('Bacon Cheese Double Stack');
-INSERT INTO burgers (burger_name) VALUES ('Black n\' Blue');
-INSERT INTO burgers (burger_name) VALUES ('Patty Melt');
+INSERT INTO burgers (burger_name) VALUES ('Golden Calf Burger');
+INSERT INTO burgers (burger_name) VALUES ('Dogma Light Burger');
+INSERT INTO burgers (burger_name) VALUES ('Jay & Silent Burger');
+INSERT INTO burgers (burger_name, devoured) VALUES ('Clerks Chicken Sammy', true);
