@@ -19,22 +19,24 @@
       </ul>
     </div><!--column-->
 
-    <div class="col-md-4 col-md-offset-4">
+    <div class="col-md-4 col-md-offset-2">
         <h1 class="text-center">Devoured</h1>
         <ul class="list-group">
             {{#each burger}}
             {{#if this.devoured}}
               <li class="list-group-item list-group-item-info">
-                <p>
                   {{this.id}}. {{this.burger_name}}
-                </p>
+                <form action="/{{this.id}}?_method=DELETE" method="POST">
+                  <input type="hidden" name="id" value="{{this.id}}">
+                  <button class="deleatIt" type="submit">Delete</button>
+                </form>
               </li>
             {{/if}}
           {{/each}}
         </ul>
     </div>
   </div><!-- /row -->
-  <div class="sumbitRow" style="margin-top: 20px;">
+  <div class="sumbitRow" style="margin: 20px 0 100px 0;">
     <div class="row">
             <div class="col-md-6 col-md-offset-3 text-center">
                 <h1 class="text-center">Add a burger</h1>

@@ -20,7 +20,13 @@ router.put("/:id", function(req,res) {
     burgerORM.updateOne(req.params.id, function(result) {
         console.log(result);
         res.redirect("/");
+  });
+});
+
+router.delete("/:id", function(req,res) {
+    burgerORM.deleteOne(req.params.id, function(result) {
+      res.redirect("/");
     });
-})
+});
 
 module.exports = router;
