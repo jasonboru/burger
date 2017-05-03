@@ -1,5 +1,7 @@
 const orm = require("../config/orm.js");
 
+// An object that is exported to burgers-controller,js
+//calling the functions from the orm.js file
 var burgerORM = {
   	selectAll: function(response){
   		orm.selectAll(function(data){

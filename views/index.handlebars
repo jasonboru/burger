@@ -8,6 +8,7 @@
             <li class="list-group-item list-group-item-warning">
               <span class="text-center">
                 {{this.id}}. {{this.burger_name}}
+                <!--method override to PUT in a form-->
                 <form action="/{{this.id}}?_method=PUT" method="POST">
                   <input type="hidden" name="id" value="{{this.id}}">
                   <button class="eatIt" type="submit">I'll Eat It!</button>
@@ -17,7 +18,7 @@
           {{/unless}}
         {{/each}}
       </ul>
-    </div><!--column-->
+    </div><!--/column-->
 
     <div class="col-md-4 col-md-offset-2">
         <h1 class="text-center">Devoured</h1>
@@ -26,6 +27,7 @@
             {{#if this.devoured}}
               <li class="list-group-item list-group-item-info">
                   {{this.id}}. {{this.burger_name}}
+                <!--method override to Delete in a form-->
                 <form action="/{{this.id}}?_method=DELETE" method="POST">
                   <input type="hidden" name="id" value="{{this.id}}">
                   <button class="deleatIt" type="submit">Delete</button>
@@ -42,9 +44,7 @@
                 <h1 class="text-center">Add a burger</h1>
                       <form method="POST" action="/" class="button">
                         <textarea class="form-control" rows="1" type="text" name="burger"></textarea>
-
                         <button class="submitBurger" type="submit">Save burger!</button>
-
                       </form>
              </div>
     </div>
