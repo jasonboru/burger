@@ -8,7 +8,7 @@
 
 In this assignment, I was asked to create a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM. I followed the MVC design pattern; using Node and MySQL to query and route data in the app, and Handlebars to generate the HTML.
 
-Check out the app running on heroku here:
+Check out the app running on heroku here: https://stark-river-53158.herokuapp.com/
 
 ## Installation Instructions
 
@@ -46,7 +46,7 @@ var connection = mysql.createConnection({
 
 ![Screenshot-04](/public/assets/img/screenshot4.jpg)
 
-4. If the user is felling fat and does not want to broadcast all the burgers they devaoured they can click the delete button next to the burger record they want to erase.
+4. If the user is feeling fat and does not want to broadcast all the burgers they devoured they can click the delete button next to the burger record they want to erase.
 
 ![Screenshot-05](/public/assets/img/screenshot5.jpg)
 
